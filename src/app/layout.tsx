@@ -3,7 +3,6 @@ import { Geist, Geist_Mono, Yesteryear } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,29 +28,32 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* [#71b07a] */}
-        {/* -[#111111] */}
         <div className="flex justify-between  text-white p-8 border-rounded  ">
           <ul className="flex ">
             <li>
               <Link href="/" className="yesteryear-regular text-4xl">
-              HG
+                HG
               </Link>
             </li>
-          </ul>  
+          </ul>
           <ul className="flex space-x-9">
             <li>
-              <Link href="#about" className=" tomorrow-extrabold font-bold text-xl">
-              About
+              <Link
+                href="#about"
+                className=" tomorrow-extrabold font-bold text-xl"
+              >
+                About
               </Link>
             </li>
             <li>
-              <Link href="#contact" className="tomorrow-extrabold font-bold text-xl">
-              Contact
+              <Link
+                href="#contact"
+                className="tomorrow-extrabold font-bold text-xl"
+              >
+                Contact
               </Link>
             </li>
-          </ul>  
-
+          </ul>
         </div>
         {children}
       </body>
