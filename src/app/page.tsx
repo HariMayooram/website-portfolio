@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import CImg from "./GameEvent.png";
+// import CImg from "./GameEvent.png";
 
 import DCImg from "./Hari.jpg";
 import auroImg from "./auro1.jpg";
