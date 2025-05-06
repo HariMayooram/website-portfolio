@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Yesteryear } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +29,30 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* [#71b07a] */}
+        {/* -[#111111] */}
+        <div className="flex justify-between  text-white p-8 border-rounded  ">
+          <ul className="flex ">
+            <li>
+              <Link href="/" className="yesteryear-regular text-4xl">
+              HG
+              </Link>
+            </li>
+          </ul>  
+          <ul className="flex space-x-9">
+            <li>
+              <Link href="#about" className=" tomorrow-extrabold font-bold text-xl">
+              About
+              </Link>
+            </li>
+            <li>
+              <Link href="#contact" className="tomorrow-extrabold font-bold text-xl">
+              Contact
+              </Link>
+            </li>
+          </ul>  
+
+        </div>
         {children}
       </body>
     </html>

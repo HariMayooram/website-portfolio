@@ -1,0 +1,176 @@
+import Image from "next/image";
+import CImg from "./GameEvent.png"
+import DCImg from "./Keyboard.jpg"
+import auroImg from "./auro1.jpg"
+import Starfield from "./component/Starfield";
+import RL from "./reactLogo.png"
+import Scroll from "./ScrollRevealSection"
+
+const dataV = {
+  "Full Stack Development": [
+    "React.js", "Next.js", "Node.js", "Express.js", "CSS", "HTML", "Flutter", "Convex"
+  ],
+  "Data & Visualization": [
+    "NumPy", "Pandas", "Scikit-learn", "TensorFlow",
+    "Tableau", "Seaborn", "Matplotlib", "Plotly", "Vis.js"
+  ],
+  "Programming Languages": [
+    "Python", "JavaScript", "Java", "PHP", "Haskell", "R", "Dart", "C"
+  ],
+  "Tools & Platforms": [
+    "MySQL", "AWS", "Git"
+  ]
+}
+
+export default function Home() {
+  return (
+    <div className="overflow-x-hidden">
+
+      {/* HERO */}
+      <div className="w-full bg-animated-earth min-h-[70vh] sm:min-h-[80vh] md:min-h-screen relative overflow-hidden">
+        <div className="absolute inset-0 grid place-items-center px-4 sm:px-8">
+          <div className="max-w-xl text-center">
+            <h1 className="font-bold text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight break-words">
+              Hey there. This is <span className="name break-words">Harigovind R</span> (Hari)
+            </h1>
+            <p className="text-white mt-4 text-sm sm:text-base md:text-lg break-words">
+              An explorer at heart – Always learning. Always building.
+            </p>
+            <p className="text-white mt-2 text-sm sm:text-base md:text-lg break-words">
+              From full-stack applications to machine-learning experiments, I’m driven by a deep curiosity to understand, build, refine, and deliver meaningful solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* ABOUT ME */}
+      <div className="h-screen relative">
+        <div className="fixed inset-0 -z-10 pointer-events-none">
+          <Starfield />
+        </div>
+        <main id="about" className="relative z-10 flex flex-col items-center p-6 sm:px-8 md:px-12 lg:px-16 w-full lg:w-3/4 xl:w-1/2 mx-auto">
+          <h1 className="holtwood-one-sc-regular text-4xl font-bold mb-6 text-center w-full">ABOUT ME</h1>
+          <div className="flex flex-col md:flex-row items-start w-full mb-8">
+            <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
+              <Image
+                src={DCImg}
+                alt="About Me"
+                className="rounded-2xl shadow-lg transition-transform hover:scale-105 object-cover w-3/4 sm:w-2/3 md:w-full h-auto"
+              />
+            </div>
+            <div className="w-full md:w-1/2 flex items-start">
+              <p className="font-medium">
+                Software Developer | ML / AI appreciator | Photography tyro | Bioinformatics and FinTech novice
+              </p>
+            </div>
+          </div>
+          <p className="text-base sm:text-lg mb-6">
+            I see code as an art, something that evolves incrementally with each bug fixed, feature shipped, and insight gained.
+            I am driven by curiosity, whether it's crafting intuitive user interfaces, optimizing backend flows, or unraveling patterns hidden in data.
+            My projects span full-stack infrastructure, machine learning algorithms—all unified by a commitment to building intelligent, responsive, and continuously improving systems.
+          </p>
+          <p className="text-base sm:text-lg mb-6">
+            As a software developer with a Master's degree in Computer Science from DePaul University, Chicago,
+            I have a strong foundation in web and mobile development, complemented by hands-on experience in data analysis and applied machine learning.
+            I approach development with structure and precision, prioritizing clean architecture, scalability, and performance.
+            Continuously expanding my skill set through practical exploration, I strive to deliver robust and meaningful solutions.
+          </p>
+        </main>
+      </div>
+
+      {/* WORK EXPERIENCE */}
+      <section className="px-4 sm:px-8 lg:px-16 mb-16">
+        <h2 className="holtwood-one-sc-regular text-4xl font-bold mb-8">WORK EXPERIENCE</h2>
+
+        {/* SOFTWARE DEVELOPER */}
+        <div className="mb-12">
+          <h3 className="changa-one-regular text-2xl sm:text-3xl font-bold mb-2">SOFTWARE DEVELOPER</h3>
+          <p className="tomorrow-regular text-lg mb-4">AltraDimension Technologies</p>
+          <ul className="list-disc list-inside text-md sm:text-lg leading-relaxed">
+            <li>Enhanced data accessibility by developing custom React hooks within management system components, leading to a 12% increase in user engagement and productivity.</li>
+            <li>Improved application efficiency by collaborating with the backend team to integrate AWS server-side logic into React client-side applications.</li>
+            <li>Elevated user satisfaction by 6% by developing targeted features in a cross-platform React Native app, enhancing navigation, UI responsiveness, and performance.</li>
+          </ul>
+        </div>
+
+        {/* FULL STACK DEVELOPER */}
+        <div className="mb-12">
+          <h3 className="changa-one-regular text-2xl sm:text-3xl font-bold mb-2">FULL STACK DEVELOPER</h3>
+          <p className="tomorrow-regular text-lg mb-4">Bharat Electronics Limited</p>
+          <ul className="list-disc list-inside text-md sm:text-lg leading-relaxed">
+            <li>Developed a web-based network and systems management platform using JavaScript to efficiently monitor and maintain system components.</li>
+            <li>Utilized vis.js and complementary libraries, resulting in a 12% improvement in overall system response time.</li>
+          </ul>
+        </div>
+
+        {/* VOLUNTEER */}
+        <div>
+          <h3 className="changa-one-regular text-2xl sm:text-3xl font-bold mb-2">VOLUNTEER</h3>
+          <p className="tomorrow-regular text-lg mb-4">SHARP NGO</p>
+          <p className="text-md sm:text-lg leading-relaxed">
+            Conducted comprehensive educational sessions on health awareness and hygiene post-COVID across 150+ schools within six months, delivering interactive workshops and practical demonstrations.
+          </p>
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section className="px-4 sm:px-8 lg:px-16 mb-16">
+        <h2 className="holtwood-one-sc-regular text-4xl font-bold mb-8">SKILLS</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {Object.entries(dataV).map(([ctg, skill], idx) => (
+            <div key={idx} className="contentCard card-skillsComp p-4">
+              <h4 className="font-semibold mb-2">{ctg}</h4>
+              <div className="grid grid-cols-2 gap-2">
+                {skill.map(s => (
+                  <span key={s} className="skillsComp text-sm sm:text-base">{s}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="px-4 sm:px-8 lg:px-16 mb-16">
+        <h2 className="holtwood-one-sc-regular text-4xl font-bold mb-8">PROJECTS</h2>
+
+        {/* Project 1 */}
+        <div className="mb-12">
+          <h3 className="changa-one-regular text-2xl sm:text-3xl font-bold mb-2">Predicting Customer Conversion for Bank Marketing Campaigns</h3>
+          <p className="text-md sm:text-lg leading-relaxed">
+            • Built an end-to-end ML pipeline on 41,000+ records to predict term–deposit signups.<br />
+            • Addressed class imbalance with SMOTE, improving minority recall.<br />
+            • Compared Random Forest vs. Logistic Regression, with LR surprisingly topping ROC AUC in some cases.
+          </p>
+        </div>
+
+        {/* Project 2 */}
+        <div className="mb-12">
+          <h3 className="changa-one-regular text-2xl sm:text-3xl font-bold mb-2">Student Support Platform</h3>
+          <p className="text-md sm:text-lg leading-relaxed">
+            • Developed responsive Next.js + Tailwind UI with AI-powered chat, boosting interactivity by 43%.<br />
+            • Architected modular React hooks for maintainability and reusability.<br />
+            • Integrated real-time Convex DB with reactive subscriptions for seamless UI updates.
+          </p>
+        </div>
+
+        {/* Project 3 */}
+        <div>
+          <h3 className="changa-one-regular text-2xl sm:text-3xl font-bold mb-2">Virtual Instructor for Movement Monitoring</h3>
+          <p className="text-md sm:text-lg leading-relaxed">
+            • Cross-platform Flutter app providing live visual/haptic feedback for workouts.<br />
+            • Deep CNN in TensorFlow for accurate activity recognition.<br />
+            • Real-time correction mechanism increasing engagement by 38%.
+          </p>
+        </div>
+      </section>
+
+      {/* SCROLL REVEAL */}
+      <main className="h-screen bg-white relative overflow-hidden">
+        <div className="absolute left-[-10%] z-10 h-1/6 w-[110%] rounded-b-[25%] shadow-[0_50px_50px_0_rgba(0,0,0,0.7)] bg-[#292929]"></div>
+        <Scroll />
+      </main>
+
+    </div>
+  );
+}
