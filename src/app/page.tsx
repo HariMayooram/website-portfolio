@@ -68,7 +68,7 @@ const dataV = {
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden ">
+    <div className="overflow-x-hidden ubuntu-regular">
       <Head />
       <div className="w-full bg-animated-earth min-h-[80vh] sm:min-h-[70vh] lg:min-h-[100vh] relative overflow-hidden ">
         {/* Text Overlay */}
