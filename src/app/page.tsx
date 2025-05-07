@@ -1,5 +1,5 @@
 "use client";
-
+import Head from "./head";
 import Image from "next/image";
 // import CImg from "./GameEvent.png";
 
@@ -69,6 +69,7 @@ const dataV = {
 export default function Home() {
   return (
     <div className="overflow-x-hidden ">
+      <Head />
       <div className="w-full bg-animated-earth min-h-[80vh] sm:min-h-[70vh] lg:min-h-[100vh] relative overflow-hidden ">
         {/* Text Overlay */}
         <div className="absolute inset-0 grid lg:place-items-center px-4 sm:px-8 ">
