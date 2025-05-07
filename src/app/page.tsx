@@ -4,23 +4,15 @@ import Image from "next/image";
 // import CImg from "./GameEvent.png";
 
 import DCImg from "./Hari.jpg";
-import auroImg from "./auro1.jpg";
+// import auroImg from "./auro1.jpg";
 import Starfield from "./component/Starfield";
-import RL from "./reactLogo.png";
+// import RL from "./reactLogo.png";
 
 import Scroll from "./ScrollRevealSection";
-import { div } from "framer-motion/client";
+// import { div } from "framer-motion/client";
 
 import { motion } from "framer-motion";
 
-const revealVariant = {
-  hidden: { opacity: 0, y: 150 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.9, ease: "easeIn" },
-  },
-};
 
 const sideRevealVariant = {
   hidden: { opacity: 0, x: -150 },
@@ -132,7 +124,7 @@ export default function Home() {
               </div>
               {/* Left Section: About Me Content */}
 
-              <p className="text-md mb-[2%]">
+              <p className="text-md mb-[2%]">{`
                 I see code as an art, something that evolves incrementally with
                 each bug fixed, feature shipped, and insight gained. I am driven
                 by curiosity, whether it's crafting intuitive user interfaces,
@@ -140,8 +132,9 @@ export default function Home() {
                 My projects span full-stack infrastructure, machine learning
                 algorithms, all unified by a commitment to building intelligent,
                 responsive, and continuously improving systems.
-              </p>
-              <p className="text-md mb-[2%]">
+                `}
+                </p>
+              <p className="text-md mb-[2%]">{`
                 As a software developer with a Master's degree in Computer
                 Science from{" "}
                 <span className="name"> DePaul University, Chicago. </span>I
@@ -152,6 +145,7 @@ export default function Home() {
                 performance. Continuously expanding my skill set through
                 practical exploration, I strive to deliver robust and meaningful
                 solutions.
+              `}
               </p>
             </div>
           </main>
@@ -280,7 +274,7 @@ export default function Home() {
                 <div className=" grid grid-cols-1  border-white w-full justify-center bg-red    lg:ml-[20%] lg:mt-30    ">
                   <div className=" card-skillsComp group md:max-w-[80%]">
                     {Object.entries(dataV).map((ctg, index) => (
-                      <div className="grid grid-cols-5 md:place-items-center">
+                      <div key={index} className="grid grid-cols-5 md:place-items-center">
                         {ctg[1].map((skill) => (
                           <div key={index} className="skillsComp font-bold ">
                             {skill}
@@ -318,6 +312,7 @@ export default function Home() {
 
                 <div className="">
                   <p className="text-md mb-6 lg:ml-[30%] lg:mr-20">
+                    {`
                     • In order to predict customer conversion in a telemarketing
                     campaign for a bank, I created a machine learning pipeline
                     for this project. • Using more than 41,000 client records
@@ -341,6 +336,7 @@ export default function Home() {
                     problems, and model interpretability to extract meaningful
                     business insights—a critical skill set for any data-driven
                     career.
+                    `}
                   </p>
                 </div>
               </div>

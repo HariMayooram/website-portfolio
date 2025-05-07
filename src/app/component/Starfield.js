@@ -3,7 +3,7 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";
 import { useRef } from "react";
-import * as THREE from "three";
+
 
 function AnimatedStarfield() {
   const starRef = useRef(null);
