@@ -200,6 +200,13 @@ body {
 .contentExtra {
   margin-top: 10rem !important;
 }
+.contentDec {
+  margin-left: -10rem !important;
+}
+
+.contentInc {
+  margin-left: 10rem !important;
+}
 .contentCardOLDER {
   margin: 2rem auto;
   padding: 2rem;
