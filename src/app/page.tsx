@@ -148,9 +148,9 @@ export default function Home() {
                 </p>
               <p className="text-md mb-[2%]">{`
                 As a software developer with a Master's degree in Computer
-                Science from
+                Science from`}
                 <span className="name"> DePaul University, Chicago. </span>I
-                have a strong foundation in web and mobile development,
+                {`have a strong foundation in web and mobile development,
                 complemented by hands-on experience in data analysis and applied
                 machine learning. I approach development with structure and
                 precision, prioritizing clean architecture, scalability, and
