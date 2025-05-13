@@ -33,7 +33,7 @@ export default function FooterReveal() {
             Fire a Message My Way
           </h1>
           <a
-            className="skillsComp text-black"
+            className="skillsComp text-black "
             href="mailto:harigov.raj@gmail.com"
           >
             harigov.raj@gmail.com
@@ -41,7 +41,7 @@ export default function FooterReveal() {
         </div>
         <div className="h-full  flex flex-row justify-between items-end ">
           <div className="my-15 sm:my-3">
-            <Link href="/" className="yesteryear-regular text-4xl m-4">
+            <Link href="/" className="yesteryear-regular text-4xl m-4 ">
               HG
             </Link>
           </div>
@@ -59,15 +59,15 @@ export default function FooterReveal() {
               <a href="https://github.com/HariMayooram">
                 <Image
                   alt="github"
-                  className="h-8 w-8 m-2 hover:bg-brown "
+                  className="h-8 w-8 m-2 hover:scale-125 hover:shadow-lg hover:shadow-white "
                   src={gitH}
                 />
               </a>
               <a href="https://www.linkedin.com/in/harigovindr/">
-                <Image alt="linkedIn" className="h-8 w-8 m-2" src={Linkd} />
+                <Image alt="linkedIn" className="h-8 w-8 m-2 hover:scale-125 hover:shadow-lg hover:shadow-white" src={Linkd} />
               </a>
               <a href="">
-                <Image alt="twitter" className="h-8 w-8 m-2" src={xT} />
+                <Image alt="twitter" className="h-8 w-8 m-2 hover:scale-125 hover:shadow-lg hover:shadow-white" src={xT} />
               </a>
             </div>
           </div>

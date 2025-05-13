@@ -13,6 +13,8 @@ import { div } from "framer-motion/client";
 
 import { motion } from "framer-motion";
 
+import SkillsCard  from "./skillsCard";
+
 const revealVariant = {
   hidden: { opacity: 0, y: 150 },
   visible: {
@@ -39,46 +41,55 @@ const modSideRevealVariant = {
   },
 };
 
-const dataV = {
-  "Full Stack Development": [
-    "React.js",
-    "Next.js",
-    "Node.js",
-    "Express.js",
-    "CSS",
-    "HTML",
-    "Flutter",
-    "Convex",
-  ],
-  "Data & Visualization": [
-    "NumPy",
-    "Pandas",
-    "Scikit-learn",
-    "TensorFlow",
-    "Tableau",
-    "Seaborn",
-    "Matplotlib",
-    "Plotly",
-    "Vis.js",
-  ],
-  "Programming Languages": [
-    "Python",
-    "JavaScript",
-    "Java",
-    "PHP",
-    "Haskell",
-    "R",
-    "Dart",
-    "C",
-  ],
-  "Tools & Platforms": ["MySQL", "AWS", "Git"],
-};
+// const dataV = {
+//   "Full Stack Development": [
+//     "React.js",
+//     "Next.js",
+//     "Node.js",
+//     "Express.js",
+//     "CSS",
+//     "HTML",
+//     "Flutter",
+//     "Convex",
+//     "Redux",
+//     "React Native",
+//     "Firebase",
+//   ],
+//   "Data & Visualization": [
+//     "NumPy",
+//     "Pandas",
+//     "Scikit-learn",
+//     "TensorFlow",
+//     "Tableau",
+//     "Seaborn",
+//     "Matplotlib",
+//     "Plotly",
+
+//   ],
+//   "Programming Languages": [
+//     "Python",
+//     "JavaScript",
+//     "Scala",
+//     "Java",
+//     "PHP",
+//     "TypeScript",
+//     "Haskell",
+//     "R",
+//     "Dart",
+//     "C",
+//     "SQL"
+//   ],
+//   "Tools & Platforms": ["MySQL", "AWS", "Git","Docker", "Vis.js","Bitbucket",
+//     "Tailwind CSS",  "Framer Motion "]
+// };
+
+
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden ubuntu-regular">
+    <div className=" ubuntu-regular">
       <Head />
-      <div className="w-full bg-animated-earth min-h-[80vh] sm:min-h-[70vh] lg:min-h-[100vh] relative overflow-hidden ">
+      <div className="w-full bg-animated-earth min-h-[80vh] sm:min-h-[70vh] lg:min-h-[100vh] relative ">
         {/* Text Overlay */}
         <div className="absolute inset-0 grid lg:place-items-center px-4 sm:px-8 ">
           <div className="flex flex-col max-w-xl text-center justify-center ">
@@ -170,9 +181,11 @@ export default function Home() {
               className=""
             >
               <div className="">
-                <h1 className="sticky top-0 holtwood-one-sc-regular text-4xl font-bold my-5">
-                  WORK <br />
+                <h1 className="lg:sticky lg:top-8 holtwood-one-sc-regular text-4xl font-bold my-5">
+                <span className=" backdrop-blur-[10px] rounded lg:mx-2 inline-block">
+                  WORK<br />
                   EXPERIENCE
+                </span>
                 </h1>
                 <div className="lg:ml-40">
                   <div className="changa-one-regular text-4xl lg:ml-100 overflow-hidden">
@@ -264,7 +277,7 @@ export default function Home() {
       </div>
       <br />
 
-      <div>
+      <div className="min-h-[120vh] overflow-scroll-auto mx-13 ">
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -273,12 +286,58 @@ export default function Home() {
           className=""
         >
           <div className="my-20 ">
-            <main className="h-[80vh]">
-              <div className=" flex flex-col lg:flex-row md:mx-16 items-start lg:pr-8 ">
-                <h1 className="holtwood-one-sc-regular text-4xl font-bold mt-5 mb-15 mx-10 sm:mx-0">
-                  SKILLS
+            <main className="min-h-[80vh]">
+              <div className="  md:mx-16 items-start lg:pr-8 pb-10">
+              {/* flex flex-col lg:flex-row */}
+                <h1 className=" holtwood-one-sc-regular text-4xl font-bold mt-5 mb-15 mx-10 sm:mx-0">
+                <span className=" backdrop-blur-sm rounded">
+                SKILLS
+                </span>
+                  
                 </h1>
-                <div className=" grid grid-cols-1  border-white w-full justify-center bg-red    lg:ml-[20%] lg:mt-30    ">
+
+                <SkillsCard />
+                {/* <div className="grid grid-cols-2 gap-x-4 group border-white w-fit  bg-red    lg:ml-[20%] lg:mt-30    ">
+                  <div>
+                <div className="changa-one-regular block text-4xl contentCard bg-white block group-hover:hidden ">
+                        {Object.entries(dataV).map( (ctgEach)=> (
+
+ 
+                          <div className="text-2xl font-bold">{ctgEach[0]}</div>
+
+
+                        )
+                        )}
+                </div>
+                <div className="hidden group-hover:block">
+                    {Object.entries(dataV).map(([ctg,skillD], index) => (
+       
+                    <div key={index} className="grid grid-cols-3 gap-2 contentCard contentInc  md:w-[70%] ">
+
+                      
+
+
+                        
+
+                        {skillD.map((skill) => (
+                          <div key={ctg} className="hidden group-hover:block">
+                          <div  className="skillsComp font-bold ">
+                            {skill}
+                          </div>
+                           </div>
+                        ))}
+
+                      </div>
+
+                    ))}
+                      </div>
+                    </div>
+                  </div> */}
+                </div>
+
+
+                
+                {/* <div className=" grid grid-cols-1  border-white w-full justify-center bg-red    lg:ml-[20%] lg:mt-30    ">
                   <div className=" card-skillsComp group md:max-w-[80%]">
                     {Object.entries(dataV).map((ctg, index) => (
                       <div className="grid grid-cols-5 md:place-items-center">
@@ -290,8 +349,8 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
             </main>
           </div>
         </motion.section>
@@ -307,8 +366,10 @@ export default function Home() {
             className=""
           >
             <div className="lg:  mx-16 items-start lg:pr-8 ">
-              <h1 className="holtwood-one-sc-regular text-4xl font-bold mt-5 mb-15">
-                PROJECTS
+              <h1 className="lg:sticky lg:top-8  holtwood-one-sc-regular text-4xl font-bold mt-5 mb-15">
+              <span className=" backdrop-blur-sm rounded">
+                    PROJECTS
+                </span>
               </h1>
               <div className="">
                 <div className="changa-one-regular text-4xl lg:ml-[30%]">
