@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const dataV = {
-  "Full Stack Technologies": ["React.js", "Next.js", "Node.js", "Express.js", "CSS", "HTML", "Flutter", "Convex", "Redux", "React Native","Firebase"],
+  "Full Stack Technologies": ["React.js", "Next.js", "Node.js", "Express.js", "Flutter", "Convex", "Redux", "React Native","Firebase", "CSS", "HTML"],
   "Data Science & Visualization": ["NumPy", "Pandas", "Scikit-learn", "TensorFlow", "Tableau", "Seaborn", "Matplotlib", "Plotly"],
   "Programming Languages": ["Python", "JavaScript", "Scala", "Java", "PHP", "TypeScript", "Haskell", "R", "Dart", "C", "SQL"],
-  "Tools & Libraries": ["MySQL", "AWS", "Git", "Docker", "Vis.js", "Bitbucket", "Tailwind CSS", "Framer Motion"]
+  "Tools & Libraries": ["MySQL", "LangChain","Zod","AWS", "Git", "Docker", "Vis.js", "Bitbucket", "Tailwind CSS", "Framer Motion"]
 };
 
 export default function SkillsCard() {

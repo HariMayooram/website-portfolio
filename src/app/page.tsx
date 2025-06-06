@@ -14,6 +14,7 @@ import Scroll from "./ScrollRevealSection";
 import { motion } from "framer-motion";
 
 import SkillsCard  from "./skillsCard";
+import gitH from "./github.png";
 
 
 const sideRevealVariant = {
@@ -365,9 +366,53 @@ export default function Home() {
                     PROJECTS
                 </span>
               </h1>
+
               <div className="">
                 <div className="changa-one-regular text-4xl lg:ml-[30%]">
-                  Predicting Customer Conversion for Bank Marketing Campaigns
+                  <div className="flex flex-row items-center">
+                  <span>AskMeStock : A financial stock assistant powered by AI</span>
+                    <a href="https://github.com/HariMayooram/AI-stock-chat">
+                    <Image
+                      alt="github"
+                      className="h-8 w-8 m-2 hover:scale-125 hover:shadow-lg hover:shadow "
+                      src={gitH}
+                    />
+                    </a>
+                  </div>
+                </div>
+                <div className="flex mt-[0.5%] text-2xl lg:ml-[30%]  italic">
+                 In Progress
+                </div>
+
+                <br />
+
+                <div className="">
+                  <p className="text-md mb-6 lg:ml-[30%] lg:mr-20">
+                    {`
+                     • Majority of financial tools today require some basic understanding of finance from the user. 
+                     • The smartstock ai assistant bridges this gap by eliminating the need for technical jargon, allowing the users to access stock related information easily.  
+                     • Using the latest advancements in  LLMs, I built the backend of SmartStock AI with LangChain.js, integrating large language models through OpenRouter.  
+                     • The system is designed to interpret user queries and intelligently route them using agents. I used a model wrapper, allowing the LLM to act as a reasoning engine that understands and processes the user input.  
+                     • Additionally, I made use of DynamicStructuredTool to allow the LLM to dynamically call a tool that resolves any company name into its official stock ticker and metadata. This tool is schema validated using Zod, which ensures more reliability.
+                     • The application is built on a full stack setup using Next.js App Router. The backend logic is handled through API routes that communicate with LangChain agents. This separation of concerns makes the app easy to maintain, deploy, and scale.  
+                     • Future plans for the project includes integrating real-time stock APIs, enabling the chat memory for conversational history and implementing RAG based document chat from any kind of financial PDFs. In addition to this, LangSmith will be used for tracing and debugging.
+                    `}
+                  </p>
+                </div>
+              </div>    
+
+              <div className="">
+                <div className="changa-one-regular text-4xl lg:ml-[30%]">
+                <div className="flex flex-row items-center">
+                <span>Predicting Customer Conversion for Bank Marketing Campaigns</span>
+                  <a href="https://github.com/HariMayooram?tab=repositories">
+                    <Image
+                      alt="github"
+                      className="h-8 w-8 m-2 hover:scale-125 hover:shadow-lg hover:shadow "
+                      src={gitH}
+                    />
+                    </a>
+                    </div>
                 </div>
 
                 <br />
