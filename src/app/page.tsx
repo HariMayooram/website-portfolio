@@ -96,7 +96,7 @@ export default function Home() {
               An explorer at heart – Always learning. Always building.
             </p>
             <p className="text-white mt-4 text-base sm:text-lg md:text-xl break-words leading-relaxed">
-              From full-stack applications to machine-learning experiments, I'm
+              From full-stack applications to machine-learning experiments, I&apos;m
               driven by a deep curiosity to understand, build, refine, and
               deliver meaningful solutions.
             </p>
