@@ -3,7 +3,8 @@ import Head from "./head";
 import Image from "next/image";
 // import CImg from "./GameEvent.png";
 
-import DCImg from "./Hari.jpg";
+// import DCImg from "./Hari.jpg";
+import DCImg from "./HariHG.jpg";
 // import auroImg from "./auro1.jpg";
 import Starfield from "./component/Starfield";
 // import RL from "./reactLogo.png";
@@ -82,30 +83,32 @@ export default function Home() {
   return (
     <div className=" ubuntu-regular">
       <Head />
-      <div className="w-full bg-animated-earth min-h-[80vh] sm:min-h-[70vh] lg:min-h-[100vh] relative ">
+      <div className="w-full bg-animated-earth h-screen relative flex items-center">
         {/* Text Overlay */}
-        <div className="absolute inset-0 grid lg:place-items-center px-4 sm:px-8 ">
-          <div className="flex flex-col max-w-xl text-center justify-center ">
-            <h1 className="font-bold text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight break-words">
-              Hey there. This is{" "}
-              <span className="name break-words">Harigovind R</span> (Hari)
+        <div className="w-full px-6 sm:px-8 md:px-12 lg:px-16 py-12 sm:py-16">
+          <div className="flex flex-col max-w-4xl mx-auto text-center justify-center">
+            <h1 className="font-bold text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
+              Hey there. This is
+              <br />
+              <span className="name">Harigovind Rajagopal</span> (Hari)
             </h1>
-            <p className="text-white mt-4 text-sm sm:text-base md:text-lg break-words">
+            <p className="text-white mt-6 text-base sm:text-lg md:text-xl break-words leading-relaxed">
               An explorer at heart – Always learning. Always building.
             </p>
-            <p className="text-white mt-2 text-sm sm:text-base md:text-lg break-words">
-              From full-stack applications to machine-learning experiments, I’m
+            <p className="text-white mt-4 text-base sm:text-lg md:text-xl break-words leading-relaxed">
+              From full-stack applications to machine-learning experiments, I'm
               driven by a deep curiosity to understand, build, refine, and
               deliver meaningful solutions.
             </p>
-            <button className="mx-auto mt-[8%] p-6 px-6 py-4 bg-[#124b50] hover:bg-[#69dbebbe] tomorrow-extrabold text-white rounded font-bold text-lg ">
-              <a href="mailto:harigov.raj@gmail.com">HIRE ME</a>{" "}
+            <button className="mx-auto mt-8 sm:mt-10 px-8 py-4 bg-[#124b50] hover:bg-[#69dbebbe] tomorrow-extrabold text-white rounded font-bold text-base sm:text-lg transition-colors duration-300">
+              <a href="mailto:harigov.raj@gmail.com">HIRE ME</a>
             </button>
           </div>
         </div>
       </div>
 
-      <div id="about" className="   ">
+      <div className="h-screen w-full flex items-center justify-center">
+      <div id="about" className="w-full">
         <div className="fixed inset-0 -z-10 pointer-events-none">
           <Starfield />
         </div>
@@ -114,30 +117,29 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
           variants={sideRevealVariant}
-          className=""
+          className="flex items-center justify-center py-12"
         >
-          <main className="!mt-[10%] relative z-10 flex flex-col lg:flex-col items-center justify-between lg:p-2 contentCard w-[97%] sm:w-3/4 lg:w-1/2">
-            <div className="lg: w-full h-1/2 flex flex-col items-start lg:p-7 ">
-              <h1 className="holtwood-one-sc-regular  text-4xl font-bold mt-[3%] mb-[5%] lg:mt-[1%] lg:mb-[1%] text-center w-full">
+          <main className="relative z-10 flex flex-col items-center justify-center contentCard w-[95%] sm:w-[90%] md:w-3/4 lg:w-2/3 xl:w-1/2">
+            <div className="w-full flex flex-col items-start p-4 sm:p-6 lg:p-8">
+              <h1 className="holtwood-one-sc-regular text-3xl sm:text-4xl font-bold mb-6 text-center w-full">
                 ABOUT ME
               </h1>
               {/* Right Section: Image */}
-              <div className="flex flex-row w-full mb-[3%] ">
-                <div className="lg: w-2/3 items-end flex">
+              <div className="flex flex-col sm:flex-row w-full mb-6 gap-4 sm:gap-6">
+                <div className="w-full sm:w-1/2 md:w-2/5 flex items-center justify-center sm:justify-start">
                   <Image
                     src={DCImg}
                     alt="About Me"
-                    className=" rounded-2xl shadow-lg transition-transform hover:scale-125 object-cover w-[50%] h-[80%] md:ml-10"
+                    className="rounded-2xl shadow-lg transition-transform hover:scale-105 object-cover w-full max-w-[280px] sm:max-w-none sm:w-full h-auto"
                   />
                 </div>
-                <div className="lg: w-1/3 items-end flex tomorrow-regular">
-                  Software Developer | ML / AI appreciator | Photography tyro |
-                  Bioinformatics and FinTech novice
+                <div className="w-full sm:w-1/2 md:w-3/5 flex items-center tomorrow-regular text-sm sm:text-base leading-relaxed text-center sm:text-left name">
+                  3+ YOE  |  Software Engineer  |  ML / AI Enthusiast  |  Healthcare Insurance FinTech  |  Photography Tyro
                 </div>
               </div>
               {/* Left Section: About Me Content */}
 
-              <p className="text-md mb-[2%]">{`
+              <p className="text-sm sm:text-base leading-relaxed mb-4">{`
                 I see code as an art, something that evolves incrementally with
                 each bug fixed, feature shipped, and insight gained. I am driven
                 by curiosity, whether it's crafting intuitive user interfaces,
@@ -147,11 +149,11 @@ export default function Home() {
                 responsive, and continuously improving systems.
                 `}
                 </p>
-              <p className="text-md mb-[2%]">{`
+              <p className="text-sm sm:text-base leading-relaxed mb-4">{`
                 As a software developer with a Master's degree in Computer
                 Science from`}
-                <span className="name"> DePaul University, Chicago. </span>I
-                {`have a strong foundation in web and mobile development,
+                <span className="name"> DePaul University, Chicago. </span>
+                {`I have a strong foundation in web and mobile development,
                 complemented by hands-on experience in data analysis and applied
                 machine learning. I approach development with structure and
                 precision, prioritizing clean architecture, scalability, and
@@ -164,10 +166,11 @@ export default function Home() {
           </main>
         </motion.section>
       </div>
+      </div>
 
-      <div className=" ">
-        <main className="my-20 lg:mt-40">
-          <div className="mt-20 mx-16 items-start lg:pr-8 ">
+      <div className="min-h-screen">
+        <main className="py-12 sm:py-16">
+          <div className="mt-12 sm:mt-16 mx-4 sm:mx-8 md:mx-12 lg:mx-16">
             <motion.section
               initial="hidden"
               whileInView="visible"
@@ -175,72 +178,81 @@ export default function Home() {
               variants={sideRevealVariant}
               className=""
             >
-              <div className="">
-                <h1 className="lg:sticky lg:top-8 holtwood-one-sc-regular text-4xl font-bold my-5">
-                <span className=" backdrop-blur-[10px] rounded lg:mx-2 inline-block">
+              <div className="lg:flex lg:gap-8">
+                <h1 className="lg:sticky lg:top-8 lg:w-1/4 holtwood-one-sc-regular text-3xl sm:text-4xl font-bold my-6 sm:my-8 lg:h-fit">
+                <span className="backdrop-blur-[10px] rounded lg:mx-2 inline-block px-2 py-1">
                   WORK<br />
                   EXPERIENCE
                 </span>
                 </h1>
-                <div className="lg:ml-40">
-                  <div className="changa-one-regular text-4xl lg:ml-100 overflow-hidden">
-                    {/* <br /> */}
+                <div className="lg:w-3/4">
+                  <div className="changa-one-regular text-2xl sm:text-3xl md:text-4xl break-words">
+                    SOFTWARE ENGINEER
+                  </div>
+
+                  <br />
+
+                  <div className="">
+                    <p className="text-base sm:text-lg mb-4 sm:mb-6 tomorrow-regular">
+                     Unum
+                    </p>
+
+                    <p className="text-sm sm:text-base leading-relaxed mb-6">
+                      • Developed secure, scalable backend systems for Commercial Lines insurance (property, auto compensation) using
+Node.js, Express.js, and Python (Flask/ FastAPI) leveraged MongoDB and MySQL for transactional policy and claims
+data, enabling robust querying and analytics.
+• Automated claims and policy workflows for Coastal Insurance and high-risk categories by integrating RESTful APIs with
+underwriting modules; implemented role-based access control and encrypted data exchange for sensitive risk
+evaluations.
+• Led deployment of insurance modules for Critical Illness, Accident, and Group Life products in Agile Scrum teams;
+contributed to sprint planning, performed code reviews, and handled unit tests using Jest and PyTest for release
+readiness.
+• Engineered GitHub Actions and Docker based CI/CD pipelines for insurance product releases (Disability, Life, Dental,
+Vision) maintained AWS cloud hosting and container orchestration for zero-downtime updates.
+• Optimized performance of reporting/quoting systems for Commercial Property and Business Interruption Coverage
+using backend caching, query optimization, and data migration scripts; reduced report latency by 30%.
+• Developed dashboard analytics and risk profile visualization tools utilizing React.js and Chart.js, enabling business
+users to monitor claims trends, loss ratios, and policy performance metrics for strategic decision-making across
+multiple insurance product lines.
+• Performed rigorous integration and regression testing for compliance across marine, flood, and liability insurance lines
+built and maintained automated test suites (JUnit, Selenium), ensuring backend systems met all financial and
+insurance regulatory standards.
+                    </p>
+                  </div>
+
+                  <div className="changa-one-regular text-2xl sm:text-3xl md:text-4xl break-words mt-12">
                     SOFTWARE DEVELOPER
                   </div>
 
                   <br />
 
                   <div className="">
-                    <p className="text-lg lg:ml-102 mb-6 tomorrow-regular ">
-                      {" "}
-                      AltraDimension Technologies
+                    <p className="text-base sm:text-lg mb-4 sm:mb-6 tomorrow-regular">
+                      Apex Infolab
                     </p>
 
-                    <p className="text-md mb-6 lg:ml-102 lg:mr-20">
-                      Enhanced data accessibility by developing custom React
-                      hooks within management system components, leading to a
-                      12% increase in user engagement and productivity by
-                      streamlining data flow, improving component reusability,
-                      and simplifying complex state and logic handling. •
-                      Improved application efficiency by collaborating with the
-                      backend team to integrate AWS server-side logic into React
-                      client-side applications. • Elevated user satisfaction by
-                      6% by developing targeted features in a cross-platform
-                      React Native app enhancing navigation, UI responsiveness
-                      and performance. Incorporated user feedback and design
-                      standards to refine functionality and deliver a seamless
-                      and intuitive user experience.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="lg:ml-40">
-                  <div className="changa-one-regular text-4xl lg:ml-100">
-                    <br />
-                    FULL STACK DEVELOPER
-                  </div>
-
-                  <br />
-
-                  <div className="">
-                    <p className="text-lg mb-6 tomorrow-regular lg:ml-102">
-                      {" "}
-                      Bharat Electronics Limited
-                    </p>
-
-                    <p className="text-md mb-6 lg:ml-102 ">
-                      Developed a web-based network and systems management
-                      platform using JavaScript to efficiently monitor, maintain
-                      and modify system components. Enabled real time updates,
-                      enhancing overall operational efficiency, and reducing
-                      manual interventions. • Utilized vis.js and various
-                      complementary frameworks/ libraries, resulting in a
-                      measurable 12% improvement in overall system response time
+                    <p className="text-sm sm:text-base leading-relaxed mb-6">
+                      • Designed and launched responsive healthcare web portals for patient bookings, EHR access, and appointment
+workflows using React.js, Node.js, Express.js, and MySQL implemented Redux state management and RESTful
+APIs for scalable user interactions.
+• Collaborated directly with healthcare clients to refine requirements and engineered custom modules for lab test
+scheduling, patient record search, and secure medical data exchange; followed Waterfall methodology with
+structured sprints and milestone tracking.
+• Implemented real-time notification and messaging system using Socket.io and WebSocket, allowing physicians and
+patients to receive instant updates for appointment confirmations, medical report uploads, and emergency alerts
+within the healthcare portal.
+• Developed and maintained robust RESTful APIs for integration between hospital systems and third-party healthcare
+solutions; enforced OAuth2 authentication, JWT tokens, and data encryption for compliant patient privacy and data
+integrity.
+• Upgraded UI/UX for health professional workflows with Material UI, responsive design, and cross-browser/device
+testing using Selenium and BrowserStack improved navigation and speed for diverse user bases.
+• Optimized medical record databases by leveraging SQL query tuning, stored procedures, and building automated
+daily backup scripts; maintained high-availability architectures on AWS cloud instances.
                     </p>
                   </div>
                 </div>
 
-                <div className="lg:ml-40">
+                {/* <div className="lg:ml-40">
                   <div className="changa-one-regular text-4xl lg:ml-100">
                     <br />
                     VOLUNTEER
@@ -264,7 +276,7 @@ export default function Home() {
                       behaviors and preventive measures among young populations.
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </motion.section>
           </div>
@@ -272,7 +284,7 @@ export default function Home() {
       </div>
       <br />
 
-      <div className="min-h-[120vh] overflow-scroll-auto mx-13 ">
+      <div className="min-h-screen px-4 sm:px-6 my-12 sm:my-16 md:my-20">
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -280,78 +292,23 @@ export default function Home() {
           variants={sideRevealVariant}
           className=""
         >
-          <div className="my-20 ">
-            <main className="min-h-[80vh]">
-              <div className="  md:mx-16 items-start lg:pr-8 pb-10">
-              {/* flex flex-col lg:flex-row */}
-                <h1 className=" holtwood-one-sc-regular text-4xl font-bold mt-5 mb-15 mx-10 sm:mx-0">
-                <span className=" backdrop-blur-sm rounded">
-                SKILLS
+          <div className="mx-4 sm:mx-8 md:mx-12 lg:mx-16">
+            <div className="lg:flex lg:gap-8">
+              <h1 className="lg:sticky lg:top-8 lg:w-1/4 holtwood-one-sc-regular text-3xl sm:text-4xl font-bold mt-6 mb-10 sm:mb-12 lg:h-fit">
+                <span className="backdrop-blur-sm rounded px-2 py-1 inline-block">
+                  SKILLS
                 </span>
-                  
-                </h1>
+              </h1>
 
+              <div className="lg:w-3/4">
                 <SkillsCard />
-                {/* <div className="grid grid-cols-2 gap-x-4 group border-white w-fit  bg-red    lg:ml-[20%] lg:mt-30    ">
-                  <div>
-                <div className="changa-one-regular block text-4xl contentCard bg-white block group-hover:hidden ">
-                        {Object.entries(dataV).map( (ctgEach)=> (
-
- 
-                          <div className="text-2xl font-bold">{ctgEach[0]}</div>
-
-
-                        )
-                        )}
-                </div>
-                <div className="hidden group-hover:block">
-                    {Object.entries(dataV).map(([ctg,skillD], index) => (
-       
-                    <div key={index} className="grid grid-cols-3 gap-2 contentCard contentInc  md:w-[70%] ">
-
-                      
-
-
-                        
-
-                        {skillD.map((skill) => (
-                          <div key={ctg} className="hidden group-hover:block">
-                          <div  className="skillsComp font-bold ">
-                            {skill}
-                          </div>
-                           </div>
-                        ))}
-
-                      </div>
-
-                    ))}
-                      </div>
-                    </div>
-                  </div> */}
-                </div>
-
-
-                
-                {/* <div className=" grid grid-cols-1  border-white w-full justify-center bg-red    lg:ml-[20%] lg:mt-30    ">
-                  <div className=" card-skillsComp group md:max-w-[80%]">
-                    {Object.entries(dataV).map((ctg, index) => (
-                      <div key={index} className="grid grid-cols-5 md:place-items-center">
-                        {ctg[1].map((skill) => (
-                          <div key={index} className="skillsComp font-bold ">
-                            {skill}
-                          </div>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
-                </div> */}
-              {/* </div> */}
-            </main>
+              </div>
+            </div>
           </div>
         </motion.section>
       </div>
 
-      <div className="my-20">
+      <div className="min-h-screen py-12 sm:py-16 md:py-20">
         <main>
           <motion.section
             initial="hidden"
@@ -360,34 +317,36 @@ export default function Home() {
             variants={modSideRevealVariant}
             className=""
           >
-            <div className="lg:  mx-16 items-start lg:pr-8 ">
-              <h1 className="lg:sticky lg:top-8  holtwood-one-sc-regular text-4xl font-bold mt-5 mb-15">
-              <span className=" backdrop-blur-sm rounded">
+            <div className="mx-4 sm:mx-8 md:mx-12 lg:mx-16">
+              <div className="lg:flex lg:gap-8">
+                <h1 className="lg:sticky lg:top-8 lg:w-1/4 holtwood-one-sc-regular text-3xl sm:text-4xl font-bold mt-6 mb-10 sm:mb-12 lg:h-fit">
+                  <span className="backdrop-blur-sm rounded px-2 py-1 inline-block">
                     PROJECTS
-                </span>
-              </h1>
+                  </span>
+                </h1>
 
-              <div className="">
-                <div className="changa-one-regular text-4xl lg:ml-[30%]">
-                  <div className="flex flex-row items-center">
-                  <span>AskMeStock : A financial stock assistant powered by AI</span>
-                    <a href="https://github.com/HariMayooram/AI-stock-chat">
-                    <Image
-                      alt="github"
-                      className="h-8 w-8 m-2 hover:scale-125 hover:shadow-lg hover:shadow "
-                      src={gitH}
-                    />
-                    </a>
+                <div className="lg:w-3/4 space-y-12 sm:space-y-16">
+                <div>
+                  <div className="changa-one-regular text-xl sm:text-2xl md:text-3xl lg:text-4xl break-words">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                      <span className="leading-tight">AskMeStock : A financial stock assistant powered by AI</span>
+                      <a href="https://github.com/HariMayooram/AI-stock-chat" className="flex-shrink-0">
+                        <Image
+                          alt="github"
+                          className="h-7 w-7 sm:h-8 sm:w-8 hover:scale-125 hover:shadow-lg transition-transform"
+                          src={gitH}
+                        />
+                      </a>
+                    </div>
                   </div>
-                </div>
-                <div className="flex mt-[0.5%] text-2xl lg:ml-[30%]  italic">
-                 In Progress
-                </div>
+                  <div className="flex mt-2 sm:mt-3 text-lg sm:text-xl md:text-2xl italic">
+                    In Progress
+                  </div>
 
-                <br />
+                  <br />
 
-                <div className="">
-                  <p className="text-md mb-6 lg:ml-[30%] lg:mr-20">
+                  <div className="">
+                    <p className="text-sm sm:text-base leading-relaxed mb-6">
                     {`
                      • Majority of financial tools today require some basic understanding of finance from the user. 
                      • The smartstock ai assistant bridges this gap by eliminating the need for technical jargon, allowing the users to access stock related information easily.  
@@ -399,26 +358,26 @@ export default function Home() {
                     `}
                   </p>
                 </div>
-              </div>    
+              </div>
 
-              <div className="">
-                <div className="changa-one-regular text-4xl lg:ml-[30%]">
-                <div className="flex flex-row items-center">
-                <span>Predicting Customer Conversion for Bank Marketing Campaigns</span>
-                  <a href="https://github.com/HariMayooram?tab=repositories">
-                    <Image
-                      alt="github"
-                      className="h-8 w-8 m-2 hover:scale-125 hover:shadow-lg hover:shadow "
-                      src={gitH}
-                    />
-                    </a>
+              <div>
+                  <div className="changa-one-regular text-xl sm:text-2xl md:text-3xl lg:text-4xl break-words">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                      <span className="leading-tight">Predicting Customer Conversion for Bank Marketing Campaigns</span>
+                      <a href="https://github.com/HariMayooram?tab=repositories" className="flex-shrink-0">
+                        <Image
+                          alt="github"
+                          className="h-7 w-7 sm:h-8 sm:w-8 hover:scale-125 hover:shadow-lg transition-transform"
+                          src={gitH}
+                        />
+                      </a>
                     </div>
-                </div>
+                  </div>
 
-                <br />
+                  <br />
 
-                <div className="">
-                  <p className="text-md mb-6 lg:ml-[30%] lg:mr-20">
+                  <div className="">
+                    <p className="text-sm sm:text-base leading-relaxed mb-6">
                     {`
                     • In order to predict customer conversion in a telemarketing
                     campaign for a bank, I created a machine learning pipeline
@@ -448,15 +407,15 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-[2%]">
-                <div className="changa-one-regular text-4xl lg:ml-[30%]">
-                  Student Support Platform
-                </div>
+              <div>
+                  <div className="changa-one-regular text-xl sm:text-2xl md:text-3xl lg:text-4xl break-words leading-tight">
+                    Student Support Platform
+                  </div>
 
-                <br />
+                  <br />
 
-                <div className="">
-                  <p className="text-md mb-6 lg:ml-[30%] lg:mr-20">
+                  <div className="">
+                    <p className="text-sm sm:text-base leading-relaxed mb-6">
                     • Built dynamic and responsive user-facing pages using
                     Next.js and Tailwind CSS, integrating AI powered chat
                     feature for personalization and recommendations. Improving
@@ -475,16 +434,16 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-[2%]">
-                <div className="changa-one-regular text-4xl lg:ml-[30%]">
-                  Virtual Instructor to Monitor Movement Based Activities using
-                  Deep CNNs
-                </div>
+              <div>
+                  <div className="changa-one-regular text-xl sm:text-2xl md:text-3xl lg:text-4xl break-words leading-tight">
+                    Virtual Instructor to Monitor Movement Based Activities using
+                    Deep CNNs
+                  </div>
 
-                <br />
+                  <br />
 
-                <div className="">
-                  <p className="text-md mb-6 lg:ml-[30%] lg:mr-20">
+                  <div className="">
+                    <p className="text-sm sm:text-base leading-relaxed mb-6">
                     • Built a cross platform mobile application using Flutter to
                     provide real time guidance, correction and monitoring of
                     user performed physical activities. Enabled interactive
@@ -500,7 +459,9 @@ export default function Home() {
                     Enabled immediate movement correction and performance
                     improvement, contributing to a more responsive fitness
                     experience
-                  </p>
+                    </p>
+                  </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -508,8 +469,8 @@ export default function Home() {
         </main>
       </div>
 
-      <main className=" relative h-[110vh] bg-white">
-        <div className=" absolute left-[-10%] z-10 h-[15%] w-[110%] rounded-b-[25%] shadow-[0_50px_50px_0px_rgba(0,0,0,0.7)] bg-animated-black"></div>
+      <main className="relative h-screen bg-white">
+        <div className="absolute left-[-10%] z-10 h-[15%] w-[110%] rounded-b-[25%] shadow-[0_50px_50px_0px_rgba(0,0,0,0.7)] bg-animated-black"></div>
         <Scroll />
       </main>
     </div>

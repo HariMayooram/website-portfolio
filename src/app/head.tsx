@@ -1,7 +1,7 @@
 export default function Head() {
     return (
       <>
-        <title>Your Website Title</title>
+        <title>HG Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
   
         {/* Google Fonts */}
