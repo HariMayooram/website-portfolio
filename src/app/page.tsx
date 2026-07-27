@@ -198,7 +198,7 @@ export default function Home() {
                     </p>
 
                     <p className="text-sm sm:text-base leading-relaxed mb-6">
-                      • Built a real-time AI chat API with FastAPI and React, engineering a custom backend adapter to batch and deliver streaming text without violating Microsoft Teams' strict rate limits.
+                      • Built a real-time AI chat API with FastAPI and React, engineering a custom backend adapter to batch and deliver streaming text without violating Microsoft Teams strict rate limits.
 
 • Secured the AI document search using PostgreSQL row-level security (RLS), forcing the system to inherit the user’s exact permissions for every search rather than using a broad, insecure service account.
 
