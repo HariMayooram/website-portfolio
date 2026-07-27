@@ -194,29 +194,22 @@ export default function Home() {
 
                   <div className="">
                     <p className="text-base sm:text-lg mb-4 sm:mb-6 tomorrow-regular">
-                     Unum
+                     Citigroup
                     </p>
 
                     <p className="text-sm sm:text-base leading-relaxed mb-6">
-                      • Developed secure, scalable backend systems for Commercial Lines insurance (property, auto compensation) using
-Node.js, Express.js, and Python (Flask/ FastAPI) leveraged MongoDB and MySQL for transactional policy and claims
-data, enabling robust querying and analytics.
-• Automated claims and policy workflows for Coastal Insurance and high-risk categories by integrating RESTful APIs with
-underwriting modules; implemented role-based access control and encrypted data exchange for sensitive risk
-evaluations.
-• Led deployment of insurance modules for Critical Illness, Accident, and Group Life products in Agile Scrum teams;
-contributed to sprint planning, performed code reviews, and handled unit tests using Jest and PyTest for release
-readiness.
-• Engineered GitHub Actions and Docker based CI/CD pipelines for insurance product releases (Disability, Life, Dental,
-Vision) maintained AWS cloud hosting and container orchestration for zero-downtime updates.
-• Optimized performance of reporting/quoting systems for Commercial Property and Business Interruption Coverage
-using backend caching, query optimization, and data migration scripts; reduced report latency by 30%.
-• Developed dashboard analytics and risk profile visualization tools utilizing React.js and Chart.js, enabling business
-users to monitor claims trends, loss ratios, and policy performance metrics for strategic decision-making across
-multiple insurance product lines.
-• Performed rigorous integration and regression testing for compliance across marine, flood, and liability insurance lines
-built and maintained automated test suites (JUnit, Selenium), ensuring backend systems met all financial and
-insurance regulatory standards.
+                      • Built a real-time AI chat API with FastAPI and React, engineering a custom backend adapter to batch and deliver streaming text without violating Microsoft Teams' strict rate limits.
+
+• Secured the AI document search using PostgreSQL row-level security (RLS), forcing the system to inherit the user’s exact permissions for every search rather than using a broad, insecure service account.
+
+• Cut peak-load response delays (p95 latency) by 38% by migrating database calls to async I/O and adding connection pooling, which eliminated thread-blocking bottlenecks when multiple users asked questions at once.
+
+• Sped up the system by building a Redis semantic cache for common AI queries, safely handling 30% of traffic instantly by actively re-verifying user permissions on every cache hit to prevent data leaks.
+
+• Reduced outdated policy answers on testing benchmarks by forcing the system to filter documents through PostgreSQL first, ensuring the AI only ever reads from active, properly dated documents.
+
+• Designed a high-speed PostgreSQL audit log to track all user activity for strict SEC compliance, proving exactly who accessed what data while keeping database logging delays under 4 milliseconds.
+
                     </p>
                   </div>
 
