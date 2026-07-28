@@ -34,9 +34,9 @@ export default function FooterReveal() {
           </h1>
           <a
             className="skillsComp text-black "
-            href="mailto:harigov.raj@gmail.com"
+            href="mailto:pro.hari.raj@gmail.com"
           >
-            harigov.raj@gmail.com
+            pro.hari.raj@gmail.com
           </a>
         </div>
         <div className="h-full  flex flex-row justify-between items-end ">
@@ -63,7 +63,7 @@ export default function FooterReveal() {
                   src={gitH}
                 />
               </a>
-              <a href="https://www.linkedin.com/in/harigovindr/">
+              <a href="https://www.linkedin.com/in/harigovindraj/">
                 <Image alt="linkedIn" className="h-8 w-8 m-2 hover:scale-125 hover:shadow-lg hover:shadow-white" src={Linkd} />
               </a>
               <a href="">
