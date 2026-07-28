@@ -22,7 +22,7 @@ export default function SkillsCard() {
       {Object.entries(dataV).map(([category, skills], index) => (
         <motion.div
           key={index}
-          onClick={handleClick}
+          onHover={handleClick}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
